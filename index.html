@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Walking Skeleton - Login</title>
+</head>
+<body>
+
+    <h1>Đăng nhập</h1>
+
+    <form>
+        <label>Tài khoản:</label>
+        <input type="text" id="username">
+
+        <br><br>
+
+        <label>Mật khẩu:</label>
+        <input type="password" id="password">
+
+        <br><br>
+
+        <button type="button" onclick="checkLogin()">Đăng nhập</button>
+    </form>
+
+    <p id="result"></p>
+
+    <script>
+        function checkLogin() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username === "admin" && password === "123") {
+                document.getElementById("result").innerText =
+                    "Đăng nhập thành công!";
+            } else {
+                document.getElementById("result").innerText =
+                    "Sai tài khoản hoặc mật khẩu!";
+            }
+        }
+    </script>
+
+</body>
+</html>
